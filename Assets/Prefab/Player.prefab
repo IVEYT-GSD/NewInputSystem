@@ -268,5 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677e471c1f1ab4d4692085e2a4f1264c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.1
-  rotateSpeed: 0.1
+  moveSpeed: 0.5
+  rotateSpeed: 1
+  rb: {fileID: 0}
+  playerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f377d70f-9d32-4188-b5b3-df245dadbf1d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
