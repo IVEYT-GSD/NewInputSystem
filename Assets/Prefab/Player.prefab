@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2029563845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2029563846}
-  m_Layer: 0
-  m_Name: WeaponHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2029563846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029563845}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1043247445648235188}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043247444565720187
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043247444565720187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.51666665}
   m_LocalScale: {x: 1, y: 1, z: -0.68666667}
   m_Children: []
   m_Father: {fileID: 1043247444578568973}
@@ -139,6 +109,7 @@ GameObject:
   - component: {fileID: 1043247444578568963}
   - component: {fileID: 1043247444578568960}
   - component: {fileID: 1043247444578568961}
+  - component: {fileID: 1043247444578568972}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -154,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043247444578568966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.19381547, y: -0.42577624, z: -0.30880916}
   m_LocalScale: {x: 1.5166389, y: 1.5166389, z: 4.5499167}
   m_Children:
   - {fileID: 1043247444565720071}
@@ -240,6 +211,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1043247444578568972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043247444578568966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb753cd180301374aa471bbcbba9b577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
 --- !u!1 &1043247445648235178
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043247445648235188}
-  - component: {fileID: 1043247445956054728}
+  - component: {fileID: 1043247445648235189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -265,15 +249,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043247445648235178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0.19381547, y: 3.2357762, z: 0.029799178}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1043247444578568973}
-  - {fileID: 2029563846}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1043247445956054728
+--- !u!114 &1043247445648235189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,26 +265,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043247445648235178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895d6f157ac41a54c8b9d98988fd6655, type: 3}
+  m_Script: {fileID: 11500000, guid: 677e471c1f1ab4d4692085e2a4f1264c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  rotateSpeed: 0.5
-  move:
-    m_Name: Move
+  moveSpeed: 0.1
+  rotateSpeed: 0.1
+  rb: {fileID: 0}
+  playerControls:
+    m_Name: Player Controls
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 95bbff04-8993-4eb3-80e3-49e64db029e6
+    m_Id: fdc9a8e5-e8c3-412f-a9af-cd2f04872b7e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-  fire:
-    m_Name: Fire
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 088a4284-c7e8-4d7d-b5c5-d78f405030d9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-  bulletPrefab: {fileID: 1300220241281375330, guid: cb3e90f0388b3334ca46e86999966d11,
-    type: 3}
