@@ -350,7 +350,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d6f157ac41a54c8b9d98988fd6655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  moveSpeed: 0.1
+  bulletSpeed: 10
+  rotateSpeed: 2
+  move:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1055b99a-99a5-4555-8436-3f2f29d0ce35
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  fire:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b3205e45-cf3a-42d3-8d4b-8ace5699f0ab
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  bulletPrefab: {fileID: 5223694837057066234, guid: 9976661e6602ef241a2d8b3109ddf4dd,
+    type: 3}
 --- !u!114 &8706451886458604762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 69dd04fd6c033524ca5f00455a9bba69,
+  m_Actions: {fileID: -944628639613478452, guid: cbb37c09079b38b4d9bee42f3daa0433,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
